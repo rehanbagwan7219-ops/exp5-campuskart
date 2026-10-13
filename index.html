@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusKart - College Essentials</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-emerald-50 text-slate-800">
+
+  <nav class="bg-emerald-950 text-white px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+      Campus<span class="text-orange-400">Kart</span>
+    </h1>
+
+    <div class="flex gap-5">
+      <a href="#products" class="hover:text-orange-400">Shop</a>
+      <a href="#footer" class="hover:text-orange-400">
+        Cart (<span id="cart-count">0</span>)
+      </a>
+    </div>
+  </nav>
+
+  <section class="bg-emerald-700 text-white mx-4 md:mx-6 mt-5 rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+
+    <div class="text-center md:text-left">
+      <p class="text-orange-300 font-semibold mb-2">
+        BACK TO COLLEGE SALE
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold">
+        College Sale
+      </h2>
+
+      <p class="mt-4 text-emerald-100">
+        Up to 50% off on bags, books and more!
+      </p>
+
+      <a href="#products" class="inline-block mt-6 bg-orange-400 hover:bg-orange-300 text-emerald-950 font-bold px-6 py-3 rounded-lg">
+        Shop Now
+      </a>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80" alt="College lifestyle sale" class="w-full md:w-2/5 h-56 md:h-64 object-cover rounded-xl shadow-lg">
+  </section>
+
+  <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 px-6 py-8">
+
+    <div class="bg-white p-5 rounded-xl shadow-sm text-center hover:shadow-md">
+      <p class="text-2xl font-bold text-emerald-700">Free</p>
+      <p class="text-slate-500">Delivery</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow-sm text-center hover:shadow-md">
+      <p class="text-2xl font-bold text-emerald-700">7-Day</p>
+      <p class="text-slate-500">Returns</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow-sm text-center hover:shadow-md">
+      <p class="text-2xl font-bold text-emerald-700">COD</p>
+      <p class="text-slate-500">Available</p>
+    </div>
+
+  </section>
+
+  <section id="products" class="px-6 pb-10">
+
+    <div class="text-center mb-8">
+      <p class="text-orange-500 font-semibold">MADE FOR STUDENTS</p>
+      <h2 class="text-3xl font-bold text-emerald-950 mt-2">
+        Popular Products
+      </h2>
+      <p class="text-slate-500 mt-2">
+        Everything you need for college, all in one place.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80" alt="College backpack" class="w-full h-48 object-cover">
+          <span class="absolute top-3 left-3 bg-orange-400 text-emerald-950 text-xs font-bold px-3 py-1 rounded-full">BESTSELLER</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-lg">College Backpack</h3>
+          <p class="mt-2 font-bold text-emerald-700">₹799 <span class="text-slate-400 line-through text-sm font-normal">₹1,299</span></p>
+          <button onclick="addToCart()" class="w-full mt-4 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded-lg font-semibold">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=500&q=80" alt="Notebook and stationery" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Notebook Set</h3>
+          <p class="mt-2 font-bold text-emerald-700">₹199 <span class="text-slate-400 line-through text-sm font-normal">₹299</span></p>
+          <button onclick="addToCart()" class="w-full mt-4 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded-lg font-semibold">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=500&q=80" alt="Reusable water bottle" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Water Bottle</h3>
+          <p class="mt-2 font-bold text-emerald-700">₹349 <span class="text-slate-400 line-through text-sm font-normal">₹499</span></p>
+          <button onclick="addToCart()" class="w-full mt-4 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded-lg font-semibold">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Headphones" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Headphones</h3>
+          <p class="mt-2 font-bold text-emerald-700">₹599 <span class="text-slate-400 line-through text-sm font-normal">₹999</span></p>
+          <button onclick="addToCart()" class="w-full mt-4 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded-lg font-semibold">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80" alt="Study desk lamp" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Study Lamp</h3>
+          <p class="mt-2 font-bold text-emerald-700">₹499 <span class="text-slate-400 line-through text-sm font-normal">₹799</span></p>
+          <button onclick="addToCart()" class="w-full mt-4 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded-lg font-semibold">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=500&q=80" alt="Lunch box and food" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Lunch Box</h3>
+          <p class="mt-2 font-bold text-emerald-700">₹299 <span class="text-slate-400 line-through text-sm font-normal">₹449</span></p>
+          <button onclick="addToCart()" class="w-full mt-4 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded-lg font-semibold">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?auto=format&fit=crop&w=500&q=80" alt="Calculator" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Calculator</h3>
+          <p class="mt-2 font-bold text-emerald-700">₹399 <span class="text-slate-400 line-through text-sm font-normal">₹599</span></p>
+          <button onclick="addToCart()" class="w-full mt-4 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded-lg font-semibold">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=500&q=80" alt="Writing supplies" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg">Writing Set</h3>
+          <p class="mt-2 font-bold text-emerald-700">₹149 <span class="text-slate-400 line-through text-sm font-normal">₹249</span></p>
+          <button onclick="addToCart()" class="w-full mt-4 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded-lg font-semibold">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="footer" class="bg-emerald-950 text-emerald-100 py-6 text-center">
+    <h2 class="text-xl font-bold">Campus<span class="text-orange-400">Kart</span></h2>
+    <p class="text-sm mt-2">Your college essentials, delivered with care.</p>
+
+    <div class="flex justify-center gap-6 mt-3">
+      <a href="#" class="hover:text-orange-400">About</a>
+      <a href="#" class="hover:text-orange-400">Contact</a>
+    </div>
+
+    <p class="text-sm mt-4">
+      &copy; 2026 CampusKart. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+
+    function addToCart() {
+      cartCount++;
+      document.getElementById("cart-count").textContent = cartCount;
+    }
+  </script>
+
+</body>
+</html>
